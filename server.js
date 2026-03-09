@@ -948,7 +948,7 @@ function requireAuth(req, res, next) {
 
 // ─── Discord OAuth2 ────────────────────────────────────────────────────────────
 app.get("/auth/login", (req, res) => {
-  const redirectUri = `https://brodwithdash-production.up.railway.app http://localhost:3000/auth/callback`;
+  const redirectUri = REDIRECT_URI;
   const params = new URLSearchParams({
     client_id    : CLIENT_ID,
     redirect_uri : redirectUri,
@@ -967,7 +967,7 @@ app.get("/dashboard", async (req, res) => {
 
   if (error) return res.redirect("/?error=" + encodeURIComponent(error));
 
-  const redirectUri = `https://brodwithdash-production.up.railway.app http://localhost:3000/auth/callback`;
+  const redirectUri = REDIRECT_URI;
   console.log("🔑 /dashboard callback received");
   console.log("   code:", code?.slice(0,10)+"...");
   console.log("   redirect_uri being sent:", redirectUri);
@@ -4002,4 +4002,5 @@ server.listen(PORT, () => {
   console.log(`🌐  Dashboard → http://localhost:${PORT}`);
   console.log(`🔑  Discord OAuth2 login`);
 });
+
 
