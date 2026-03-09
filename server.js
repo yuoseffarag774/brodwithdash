@@ -921,7 +921,7 @@ async function runScheduledBroadcast(s) {
 // ─── Middleware ────────────────────────────────────────────────────────────────
 app.use(express.json());
 const FileStore = require("session-file-store")(session);
-app.set('trust proxy', 1);\napp.use(session({
+app.set('trust proxy', 1);`napp.use(session({
   store: new FileStore({ path: "./sessions", ttl: 604800, reapInterval: 3600 }),
   secret: SESSION_SECRET || "broadcast-bot-secret-2024",
   name: "bcbot.sid",
@@ -4002,3 +4002,4 @@ server.listen(PORT, () => {
   console.log(`🌐  Dashboard → http://localhost:${PORT}`);
   console.log(`🔑  Discord OAuth2 login`);
 });
+
