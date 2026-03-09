@@ -1,0 +1,44 @@
+[
+  {
+    "id": "866ddfc9",
+    "groupName": "112",
+    "guildId": "1480055675798421514",
+    "message": "تست (كيلر يا شرموط)",
+    "scheduledAt": "2026-03-08T15:40:00.000Z",
+    "delay": 800,
+    "mode": "bc",
+    "roleId": null,
+    "status": "missed",
+    "createdAt": "2026-03-08T15:38:48.908Z",
+    "createdBy": "1421142825180987513",
+    "finishedAt": "2026-03-08T16:46:43.854Z"
+  },
+  {
+    "id": "577ec621",
+    "groupName": "112",
+    "guildId": "1480055675798421514",
+    "message": "9999",
+    "scheduledAt": "2026-03-09T00:23:00.000Z",
+    "delay": 800,
+    "mode": "bc",
+    "roleId": null,
+    "status": "done",
+    "createdAt": "2026-03-09T00:21:43.931Z",
+    "createdBy": "1421142825180987513",
+    "finishedAt": "2026-03-09T00:23:06.539Z"
+  },
+  {
+    "id": "7e2dafe5",
+    "groupName": "112",
+    "guildId": "1480055675798421514",
+    "message": "hi",
+    "scheduledAt": "2026-03-09T11:15:00.000Z",
+    "delay": 800,
+    "mode": "bc",
+    "roleId": null,
+    "status": "done",
+    "createdAt": "2026-03-09T11:14:29.817Z",
+    "createdBy": "1421142825180987513",
+    "finishedAt": "2026-03-09T11:15:13.656Z"
+  }
+]

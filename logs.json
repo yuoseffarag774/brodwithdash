@@ -1,0 +1,58 @@
+[
+  {
+    "type": "manual",
+    "groupName": "112",
+    "guildId": "1480055675798421514",
+    "mode": "bc",
+    "roleId": null,
+    "sent": 4,
+    "failed": 0,
+    "total": 4,
+    "message": "xvcxvxcv",
+    "id": "ee8e91a6",
+    "timestamp": "2026-03-09T11:17:27.668Z"
+  },
+  {
+    "type": "scheduled",
+    "scheduleId": "7e2dafe5",
+    "groupName": "112",
+    "guildId": "1480055675798421514",
+    "mode": "bc",
+    "roleId": null,
+    "sent": 4,
+    "failed": 0,
+    "total": 4,
+    "status": "done",
+    "message": "hi",
+    "id": "ecf4d8ce",
+    "timestamp": "2026-03-09T11:15:13.658Z"
+  },
+  {
+    "type": "scheduled",
+    "scheduleId": "577ec621",
+    "groupName": "112",
+    "guildId": "1480055675798421514",
+    "mode": "bc",
+    "roleId": null,
+    "sent": 3,
+    "failed": 0,
+    "total": 3,
+    "status": "done",
+    "message": "9999",
+    "id": "f29d9f2b",
+    "timestamp": "2026-03-09T00:23:06.541Z"
+  },
+  {
+    "type": "manual",
+    "groupName": "112",
+    "guildId": "1480055675798421514",
+    "mode": "bc",
+    "roleId": null,
+    "sent": 3,
+    "failed": 0,
+    "total": 3,
+    "message": "alkd;laskkad",
+    "id": "1186d5e3",
+    "timestamp": "2026-03-08T14:31:28.760Z"
+  }
+]
