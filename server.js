@@ -921,7 +921,7 @@ async function runScheduledBroadcast(s) {
 // ─── Middleware ────────────────────────────────────────────────────────────────
 app.use(express.json());
 const FileStore = require("session-file-store")(session);
-app.use(session({
+app.set('trust proxy', 1);\napp.use(session({
   store: new FileStore({ path: "./sessions", ttl: 604800, reapInterval: 3600 }),
   secret: SESSION_SECRET || "broadcast-bot-secret-2024",
   name: "bcbot.sid",
@@ -932,7 +932,7 @@ app.use(session({
     maxAge: 7 * 24 * 60 * 60 * 1000,
     httpOnly: true,
     sameSite: "lax",
-    secure: false,
+    secure: process.env.NODE_ENV === 'production' || process.env.RENDER === 'true',
     path: "/",
   },
 }));
@@ -948,7 +948,7 @@ function requireAuth(req, res, next) {
 
 // ─── Discord OAuth2 ────────────────────────────────────────────────────────────
 app.get("/auth/login", (req, res) => {
-  const redirectUri = `http://localhost:${PORT}/dashboard`;
+  const redirectUri = `https://brodwithdash-production.up.railway.app http://localhost:3000/auth/callback`;
   const params = new URLSearchParams({
     client_id    : CLIENT_ID,
     redirect_uri : redirectUri,
@@ -967,7 +967,7 @@ app.get("/dashboard", async (req, res) => {
 
   if (error) return res.redirect("/?error=" + encodeURIComponent(error));
 
-  const redirectUri = `http://localhost:${PORT}/dashboard`;
+  const redirectUri = `https://brodwithdash-production.up.railway.app http://localhost:3000/auth/callback`;
   console.log("🔑 /dashboard callback received");
   console.log("   code:", code?.slice(0,10)+"...");
   console.log("   redirect_uri being sent:", redirectUri);
